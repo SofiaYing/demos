@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transform: translateZ(0)
+}
+
+section {
+    height: 1000px;
+    z-index: 1;
+    position: relative;
+    color: #442e03;
+    overflow: hidden;
+}
+
+section .page_wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section .page_wrapper ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section .page_wrapper ul li {
+    width: 100%;
+    position: absolute;
+}
+
+section .page_wrapper .element_box {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_1 {
+    top: 20px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_1 .element_box {
+    text-align: center;
+}
+
+section .page_wrapper ul #li_1 .element_box span {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+section .page_wrapper ul #li_2 {
+    top: 0;
+    z-index: 2
+}
+
+section .page_wrapper ul #li_2 .element_content_box {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_2 .element_content_box img {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_3 {
+    top: 504px;
+    z-index: 2
+}
+
+section .page_wrapper ul #li_3 .element_content_box {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_3 .element_content_box img {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_4 {
+    top: 350px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_4 .element_box {
+    width: 100%;
+    padding: 20px;
+}
+
+section .page_wrapper ul #li_4 .element_box span {
+    line-height: 1.5;
+}
+
+section .page_wrapper ul #li_5 {
+    top: 100px;
+    left: 40px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_5 .element_box .fadeIn {
+    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+}
+
+section .page_wrapper ul #li_5 .element_box img {}
+
+section .page_wrapper ul #li_6 {
+    top: 180px;
+    left: 40px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_6 .element_box .fadeIn {
+    animation-duration: 4s;
+    -webkit-animation-duration: 4s;
+}
+
+section .page_wrapper ul #li_6 .element_box img {}
+
+section .page_wrapper ul #li_7 {
+    top: 720px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_7 .element_box {
+    width: 100%;
+    padding: 20px;
+}
+
+section .page_wrapper ul #li_7 .element_box span {
+    line-height: 1.5;
+}
+
+section .page_wrapper ul #li_8 {
+    top: 760px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_8 .element_content_box {
+    padding: 20px;
+}
+
+section .page_wrapper .element_box input {
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 100%;
+    outline: none;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+section .page_wrapper ul #li_9 {
+    top: 200px;
+    z-index: 2;
+    right: 20px;
+}
+
+section .page_wrapper ul #li_9 .element_content_box {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_9 .element_content_box img {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_10 {
+    top: 180px;
+    z-index: 2;
+    right: 0;
+    width: 40px;
+    height: 180px;
+}
+
+section .page_wrapper ul #li_10 .element_content_box {
+    width: 100%;
+}
+
+section .page_wrapper ul #li_10 .element_content_box img {
+    width: 100%;
+}
