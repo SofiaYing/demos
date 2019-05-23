@@ -1,37 +1,32 @@
-//判断视窗
-// function isInViewPortOfTwo(el) {
-//     const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-//     const top = el.getBoundingClientRect() && el.getBoundingClientRect().top
-//     return top <= viewPortHeight + 100
-// }
-
-// var inputArray = $('input')
-// console.log(inputArray)
-// $('input').bind('focus', function() {
-//     $('input').css('position', 'static');
-//     //或者$('#viewport').height($(window).height()+'px'); 
-//     console.log($(input).css)
-// }).bind('blur', function() {
-//     $('input').css({ 'position': 'fixed', 'bottom': '0' });
-//     //或者$('#viewport').height('auto'); 
-// });
-// var bfscrolltop = $('ul')[0].scrollTop;
-
-$("#input_1").focus(function(event) {
-    // console.log(this, event)
-    //     // var bfscrolltop = $('ul')[0].scrollTop;
-    // console.log(bfscrolltop)
-    // document.body.scrollTop = document.body.scrollHeight;
-    //console.log(document.body.scrollTop);
-}).blur(function() {
-    // document.body.scrollTop = bfscrolltop;
-    //console.log(document.body.scrollTop);
-    $('section').scroll()
+$(function() {
+    var u = navigator.userAgent,
+        app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isAndroid) {
+        // alert("安卓机！")
+    }
+    if (isIOS) {
+        // alert("苹果果机！")
+        var inputs = document.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('blur', function(e) {
+                window.setTimeout(function() {
+                    e.target.scrollIntoViewIfNeeded();
+                }, 0);
+            })
+        }
+    }
 });
-// if (!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) || navigator.userAgent.indexOf('micromessenger') > -1) {
-//     self.textInput.addEventListener('blur', function() {
-//         window.scrollTo(0, 0);
-//         console.log('lose point')
+
+
+// if (/Android/gi.test(navigator.userAgent)) {
+//     window.addEventListener('resize', function() {
+//         if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
+//             window.setTimeout(function() {
+//                 document.activeElement.scrollIntoViewIfNeeded();
+//             }, 0);
+//         }
 //     })
 // }
 
