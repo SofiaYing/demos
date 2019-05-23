@@ -8,9 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./animate.css" />
     <link rel="stylesheet" type="text/css" href="./demo.css" />
-    <script type="text/javascript" src="iscroll/build/iscroll.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-
     <script src="animate.js"></script>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script>
@@ -105,7 +103,7 @@
                 <li id="li_8">
                     <div class="element_box">
                         <div class="element_content_box">
-                            <input placeholder="节气" />
+                            <input id="input_1" placeholder="节气" />
                         </div>
                     </div>
                 </li>
@@ -130,33 +128,37 @@
 
 
 <script>
-    // var wrapper = document.getElementById('wrapper')
+    var u = navigator.userAgent,
+        app = navigator.appVersion
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    $(document).ready(function() {
+        $("input").blur(function() {
+            if (isIOS) {
+                blurAdjust()
+                    // alert("1231321233")
+            }
+        });
+    });
+    // 解决苹果不回弹页面
+    function blurAdjust(e) {
+        setTimeout(() => {
+            // alert("1231321233")
+            if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
+                return
+            }
+            let result = 'pc';
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { //判断iPhone|iPad|iPod|iOS
+                result = 'ios'
+            } else if (/(Android)/i.test(navigator.userAgent)) {  //判断Android
+                result = 'android'
+            }
 
-    // var myscroll
-
-    // function loaded() {
-    //     setTimeout(function() {
-    //         myscroll = new IScroll(wrapper, {
-    //             mouseWheel: true
-    //         });
-    //     }, 100);
-    // }
-    // window.addEventListener("load", loaded, false);
-    // document.addEventListener('touchmove', function(e) {
-    //     e.preventDefault();
-    // }, false);
-
-
-    // var bfscrolltop = document.body.scrollTop;
-    // $("input").focus(function(event) {
-    //     console.log(this, event)
-    //         // document.body.scrollTop = document.body.scrollHeight;
-    //     console.log(document.body.scrollTop, event.scrollTop, window.screenTop);
-    // }).blur(function() {
-    //     // document.body.scrollTop = bfscrolltop;
-    //     //console.log(document.body.scrollTop);
-    //     window.scrollTo(0, 0)
-    // });
+            if (result = 'ios') {
+                document.activeElement.scrollIntoViewIfNeeded(true);
+            }
+        }, 100)
+    }
+</script>
 </script>
 <script src="demo.js"></script>
 

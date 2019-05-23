@@ -17,16 +17,17 @@
 // });
 // var bfscrolltop = $('ul')[0].scrollTop;
 
-// $("input").focus(function(event) {
-//     console.log(this, event)
-//         // var bfscrolltop = $('ul')[0].scrollTop;
-//     console.log(bfscrolltop)
-//     document.body.scrollTop = document.body.scrollHeight;
-//     //console.log(document.body.scrollTop);
-// }).blur(function() {
-//     document.body.scrollTop = bfscrolltop;
-//     //console.log(document.body.scrollTop);
-// });
+$("#input_1").focus(function(event) {
+    // console.log(this, event)
+    //     // var bfscrolltop = $('ul')[0].scrollTop;
+    // console.log(bfscrolltop)
+    // document.body.scrollTop = document.body.scrollHeight;
+    //console.log(document.body.scrollTop);
+}).blur(function() {
+    // document.body.scrollTop = bfscrolltop;
+    //console.log(document.body.scrollTop);
+    $('section').scroll()
+});
 // if (!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) || navigator.userAgent.indexOf('micromessenger') > -1) {
 //     self.textInput.addEventListener('blur', function() {
 //         window.scrollTo(0, 0);
