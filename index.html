@@ -12,6 +12,38 @@
     <!-- <script type="text/javascript" src="iscroll/build/iscroll.js"></script> -->
     <script src="animate.js"></script>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+    <script>
+        (function() {
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent) ||
+                    window.innerWidth < 500;
+            }
+
+            function isIphoneX() {
+                return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
+            }
+
+            function setScale(width) {
+                var pageScale = 1;
+                var width = width || document.documentElement.clientWidth || 320;
+                // if (width / height >= 320 / 486) {
+                //     pageScale = height / 486;
+                // } else {
+                //     pageScale = width / 320;
+                // }
+                /**
+                 * 长页面编辑器
+                 * 长页面不需要考虑宽高比，只需要根据当前屏幕宽与320比例进行缩放即可。
+                 * */
+                pageScale = width / 320;
+                var baseNum = getBaseNum();
+                pageScale = parseInt(pageScale * baseNum) / baseNum;
+                // meta
+                var content = 'width=320, initial-scale=' + pageScale + ', maximum-scale=' + pageScale + ',minimum-scale=' + pageScale + ',user-scalable=no';
+                document.getElementById('viewport').setAttribute('content', content);
+            }
+        })()
+    </script>
 </head>
 
 <body>
@@ -51,14 +83,14 @@
                 <li id="li_5" class="animation" data-animation="fadeIn">
                     <div class="element_box">
                         <div class="element_content_box">
-                            <img src="./images/textXiao.png">
+                            <img src="./images/xiao.png">
                         </div>
                     </div>
                 </li>
                 <li id="li_6" class="animation" data-animation="fadeIn">
                     <div class="element_box">
                         <div class="element_content_box">
-                            <img src="./images/textMan.png">
+                            <img src="./images/man.png">
                         </div>
                     </div>
                 </li>

@@ -5,7 +5,7 @@
 //     return top <= viewPortHeight + 100
 // }
 
-var bfscrolltop = document.body.scrollTop;
+var bfscrolltop = document.getElementsByTagName('ul')[0].scrollTop;
 $("input").focus(function() {
     document.body.scrollTop = document.body.scrollHeight;
     //console.log(document.body.scrollTop);
@@ -13,6 +13,12 @@ $("input").focus(function() {
     document.body.scrollTop = bfscrolltop;
     //console.log(document.body.scrollTop);
 });
+// if(!!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) || navigator.userAgent.indexOf('micromessenger') > -1){
+//     self.textInput.addEventListener('blur',function(){
+//         window.scrollTo(0,0);
+//         console.log('lose point')
+//     })
+// }
 
 //监听视窗
 const intersectionObserver = new IntersectionObserver((entries) => {
