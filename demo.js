@@ -13,8 +13,8 @@ $(function() {
             inputs[i].addEventListener('blur', function(e) {
 
                 window.setTimeout(function() {
-                    // e.target.scrollIntoViewIfNeeded();
-                    e.target.scrollIntoView(false)
+                    e.target.scrollIntoViewIfNeeded();
+                    // e.target.scrollIntoView(false)
                 }, 0);
             })
         }
