@@ -12,9 +12,9 @@ $(function() {
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('blur', function(e) {
 
-                window.setTimeout(function() {
-                    e.target.scrollIntoViewIfNeeded();
-                    // e.target.scrollIntoView(false)
+                setTimeout(function() {
+                    // e.target.scrollIntoViewIfNeeded();
+                    e.target.scrollIntoView(false)
                 }, 0);
             })
         }
