@@ -8,8 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./animate.css" />
     <link rel="stylesheet" type="text/css" href="./demo.css" />
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="iscroll/build/iscroll.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
     <script src="animate.js"></script>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script>
@@ -48,7 +49,7 @@
 
 <body>
     <section class="page_section">
-        <div class="page_wrapper" id="wrapper">
+        <div class="page_wrapper">
             <ul>
                 <li id="li_1" class="animation" data-animation="bounceIn">
                     <div class="element_box">
@@ -129,30 +130,32 @@
 
 
 <script>
-    var wrapper = $('#wrapper')
+    // var wrapper = document.getElementById('wrapper')
 
-    var myscroll
+    // var myscroll
 
-    function loaded() {
-        setTimeout(function() {
-            myscroll = new IScroll("wrapper", {
-                mouseWheel: true
-            });
-        }, 100);
-    }
-    window.addEventListener("load", loaded, false);
-    document.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-    }, false);
+    // function loaded() {
+    //     setTimeout(function() {
+    //         myscroll = new IScroll(wrapper, {
+    //             mouseWheel: true
+    //         });
+    //     }, 100);
+    // }
+    // window.addEventListener("load", loaded, false);
+    // document.addEventListener('touchmove', function(e) {
+    //     e.preventDefault();
+    // }, false);
 
 
     // var bfscrolltop = document.body.scrollTop;
-    // $("input").focus(function() {
-    //     document.body.scrollTop = document.body.scrollHeight;
-    //     //console.log(document.body.scrollTop);
+    // $("input").focus(function(event) {
+    //     console.log(this, event)
+    //         // document.body.scrollTop = document.body.scrollHeight;
+    //     console.log(document.body.scrollTop, event.scrollTop, window.screenTop);
     // }).blur(function() {
-    //     document.body.scrollTop = bfscrolltop;
+    //     // document.body.scrollTop = bfscrolltop;
     //     //console.log(document.body.scrollTop);
+    //     window.scrollTo(0, 0)
     // });
 </script>
 <script src="demo.js"></script>
