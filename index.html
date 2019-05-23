@@ -160,11 +160,11 @@
     // }
     var inputs = document.getElementsByTagName("input");
     for (var i = 0; i < inputs.length; i++) {
-        inputs[i].onclick = function(e) {
+        inputs[i].addEventListener('blur', function(e) {
             window.setTimeout(function() {
                 e.target.scrollIntoViewIfNeeded();
             }, 0);
-        }
+        })
     }
     if (/Android/gi.test(navigator.userAgent)) {
         window.addEventListener('resize', function() {
