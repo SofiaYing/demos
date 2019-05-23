@@ -152,6 +152,29 @@ section .page_wrapper ul #li_8 .element_content_box {
     padding: 20px;
 }
 
+section .page_wrapper ul #li_9 {
+    top: 800px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_9 .element_box {
+    width: 100%;
+    padding: 20px;
+}
+
+section .page_wrapper ul #li_9 .element_box span {
+    line-height: 1.5;
+}
+
+section .page_wrapper ul #li_10 {
+    top: 840px;
+    z-index: 3;
+}
+
+section .page_wrapper ul #li_10 .element_content_box {
+    padding: 20px;
+}
+
 section .page_wrapper .element_box input {
     padding: 5px;
     width: 100%;
@@ -162,34 +185,4 @@ section .page_wrapper .element_box input {
     color: inherit;
     font: inherit;
     margin: 0;
-}
-
-section .page_wrapper ul #li_9 {
-    top: 200px;
-    z-index: 2;
-    right: 20px;
-}
-
-section .page_wrapper ul #li_9 .element_content_box {
-    width: 100%;
-}
-
-section .page_wrapper ul #li_9 .element_content_box img {
-    width: 100%;
-}
-
-section .page_wrapper ul #li_10 {
-    top: 180px;
-    z-index: 2;
-    right: 0;
-    width: 40px;
-    height: 180px;
-}
-
-section .page_wrapper ul #li_10 .element_content_box {
-    width: 100%;
-}
-
-section .page_wrapper ul #li_10 .element_content_box img {
-    width: 100%;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./animate.css" />
     <link rel="stylesheet" type="text/css" href="./demo.css" />
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <!-- <script type="text/javascript" src="iscroll/build/iscroll.js"></script> -->
+    <script type="text/javascript" src="iscroll/build/iscroll.js"></script>
     <script src="animate.js"></script>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script>
@@ -48,7 +48,7 @@
 
 <body>
     <section class="page_section">
-        <div class="page_wrapper">
+        <div class="page_wrapper" id="wrapper">
             <ul>
                 <li id="li_1" class="animation" data-animation="bounceIn">
                     <div class="element_box">
@@ -108,20 +108,20 @@
                         </div>
                     </div>
                 </li>
-                <!-- <li id="li_9">
+                <li id="li_9" class="animation" data-animation="bounceOut">
                     <div class="element_box">
                         <div class="element_content_box">
-                            <img src="./images/cloud.png">
+                            <span>再输入一个吧</span>
                         </div>
                     </div>
-                </li> -->
-                <!-- <li id="li_10">
+                </li>
+                <li id="li_10">
                     <div class="element_box">
                         <div class="element_content_box">
-                            <img src="./images/crow.png">
+                            <input placeholder="节气" />
                         </div>
                     </div>
-                </li> -->
+                </li>
             </ul>
         </div>
     </section>
@@ -129,22 +129,21 @@
 
 
 <script>
-    // var wrapper = document.querySelector('page_wrapper')
-    // var myscroll
+    var wrapper = $('#wrapper')
 
-    // function loaded() {
-    //     setTimeout(function() {
-    //         myscroll = new IScroll("wrapper", {
-    //             mouseWheel: true
-    //         });
-    //     }, 100);
-    //     // myscroll = new IScroll("wrapper")
-    // }
-    // // console.log(wrapper, wrapper.children[0])
-    // window.addEventListener("load", loaded, false);
-    // document.addEventListener('touchmove', function(e) {
-    //     e.preventDefault();
-    // }, false);
+    var myscroll
+
+    function loaded() {
+        setTimeout(function() {
+            myscroll = new IScroll("wrapper", {
+                mouseWheel: true
+            });
+        }, 100);
+    }
+    window.addEventListener("load", loaded, false);
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, false);
 
 
     // var bfscrolltop = document.body.scrollTop;
